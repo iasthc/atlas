@@ -10,15 +10,15 @@ import (
 	"fmt"
 	"time"
 
-	"ariga.io/atlas/cmd/atlas/internal/migrate/ent"
-	"ariga.io/atlas/cmd/atlas/internal/migrate/ent/revision"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlclient"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
 	entschema "entgo.io/ent/dialect/sql/schema"
 	"github.com/google/uuid"
+	"github.com/iasthc/atlas/cmd/atlas/internal/migrate/ent"
+	"github.com/iasthc/atlas/cmd/atlas/internal/migrate/ent/revision"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlclient"
 )
 
 type (

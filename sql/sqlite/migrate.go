@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"strings"
 
-	"ariga.io/atlas/sql/internal/sqlx"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/internal/sqlx"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
 )
 
 // DefaultPlan provides basic planning capabilities for SQLite dialects.

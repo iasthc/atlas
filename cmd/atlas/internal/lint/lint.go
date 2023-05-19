@@ -12,11 +12,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"ariga.io/atlas/cmd/atlas/internal/sqlparse"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlcheck"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/cmd/atlas/internal/sqlparse"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlcheck"
+	"github.com/iasthc/atlas/sql/sqlclient"
 )
 
 type (

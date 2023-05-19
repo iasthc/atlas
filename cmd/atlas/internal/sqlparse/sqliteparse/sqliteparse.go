@@ -10,9 +10,9 @@ import (
 	"strconv"
 	"strings"
 
-	"ariga.io/atlas/cmd/atlas/internal/sqlparse/parseutil"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/cmd/atlas/internal/sqlparse/parseutil"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
 
 	"github.com/antlr/antlr4/runtime/Go/antlr"
 	"golang.org/x/exp/slices"

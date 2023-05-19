@@ -7,7 +7,7 @@ package mysqlversion_test
 import (
 	"testing"
 
-	"ariga.io/atlas/sql/mysql/internal/mysqlversion"
+	"github.com/iasthc/atlas/sql/mysql/internal/mysqlversion"
 )
 
 func TestV_SupportsGeneratedColumns(t *testing.T) {

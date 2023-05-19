@@ -11,8 +11,8 @@ import (
 	"testing/fstest"
 	"time"
 
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/sqltool"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/sqltool"
 	"github.com/stretchr/testify/require"
 )
 

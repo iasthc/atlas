@@ -10,12 +10,12 @@ import (
 	"strconv"
 	"strings"
 
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/internal/specutil"
-	"ariga.io/atlas/sql/internal/sqlx"
-	"ariga.io/atlas/sql/postgres/internal/postgresop"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlspec"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/internal/specutil"
+	"github.com/iasthc/atlas/sql/internal/sqlx"
+	"github.com/iasthc/atlas/sql/postgres/internal/postgresop"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlspec"
 
 	"github.com/hashicorp/hcl/v2/hclparse"
 	"github.com/zclconf/go-cty/cty"

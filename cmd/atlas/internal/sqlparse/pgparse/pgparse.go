@@ -7,10 +7,10 @@ package pgparse
 import (
 	"fmt"
 
-	"ariga.io/atlas/cmd/atlas/internal/sqlparse/parseutil"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/postgres"
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/cmd/atlas/internal/sqlparse/parseutil"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/postgres"
+	"github.com/iasthc/atlas/sql/schema"
 
 	"github.com/auxten/postgresql-parser/pkg/sql/parser"
 	"github.com/auxten/postgresql-parser/pkg/sql/sem/tree"

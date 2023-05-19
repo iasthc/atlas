@@ -15,9 +15,9 @@ import (
 	"strings"
 	"sync"
 
-	"ariga.io/atlas/sql/internal/sqlx"
-	"ariga.io/atlas/sql/postgres/internal/postgresop"
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/internal/sqlx"
+	"github.com/iasthc/atlas/sql/postgres/internal/postgresop"
+	"github.com/iasthc/atlas/sql/schema"
 )
 
 // A diff provides a PostgreSQL implementation for schema.Inspector.

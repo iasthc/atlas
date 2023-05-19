@@ -21,7 +21,7 @@ If you would like to build Atlas from source follow the instructions [here](http
 
 If you would like to build Atlas from source without the UI code run:
 ```shell
-go get ariga.io/atlas/cmd/atlas
+go get github.com/iasthc/atlas/cmd/atlas
 ```
 
 ## atlas license

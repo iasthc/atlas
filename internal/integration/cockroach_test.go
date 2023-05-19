@@ -13,9 +13,9 @@ import (
 	"sync"
 	"testing"
 
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/postgres"
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/postgres"
+	"github.com/iasthc/atlas/sql/schema"
 
 	_ "github.com/lib/pq"
 	"github.com/stretchr/testify/require"

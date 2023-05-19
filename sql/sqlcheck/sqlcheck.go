@@ -14,10 +14,10 @@ import (
 	"context"
 	"sync"
 
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlclient"
 )
 
 type (

@@ -14,9 +14,9 @@ import (
 	"strings"
 	"text/template"
 
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/sqlcheck"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/sqlcheck"
+	"github.com/iasthc/atlas/sql/sqlclient"
 
 	"golang.org/x/exp/slices"
 )

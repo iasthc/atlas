@@ -10,7 +10,7 @@ import (
 	"context"
 	"fmt"
 
-	"ariga.io/atlas/cmd/atlas/internal/migrate/ent"
+	"github.com/iasthc/atlas/cmd/atlas/internal/migrate/ent"
 )
 
 // The RevisionFunc type is an adapter to allow the use of ordinary

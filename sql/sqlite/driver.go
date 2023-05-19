@@ -16,10 +16,10 @@ import (
 	"strings"
 	"time"
 
-	"ariga.io/atlas/sql/internal/sqlx"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/sql/internal/sqlx"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlclient"
 )
 
 type (

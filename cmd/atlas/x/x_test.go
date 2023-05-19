@@ -9,13 +9,13 @@ import (
 	"testing"
 	_ "unsafe"
 
-	"ariga.io/atlas/cmd/atlas/x"
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/sqlcheck"
-	"ariga.io/atlas/sql/sqlclient"
-	_ "ariga.io/atlas/sql/sqlite"
-	_ "ariga.io/atlas/sql/sqlite/sqlitecheck"
+	"github.com/iasthc/atlas/cmd/atlas/x"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/sqlcheck"
+	"github.com/iasthc/atlas/sql/sqlclient"
+	_ "github.com/iasthc/atlas/sql/sqlite"
+	_ "github.com/iasthc/atlas/sql/sqlite/sqlitecheck"
 
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/stretchr/testify/require"
@@ -34,5 +34,5 @@ func TestLintLatest(t *testing.T) {
 	require.NotNil(t, report)
 }
 
-//go:linkname lintLatest ariga.io/atlas/cmd/atlas/x.lintLatest
+//go:linkname lintLatest github.com/iasthc/atlas/cmd/atlas/x.lintLatest
 func lintLatest(context.Context, *sqlclient.Client, migrate.Dir, int, []sqlcheck.Analyzer) (report *x.SummaryReport, err error)

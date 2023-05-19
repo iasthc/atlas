@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/schema"
 )
 
 // ExcludeRealm filters resources in the realm based on the given patterns.

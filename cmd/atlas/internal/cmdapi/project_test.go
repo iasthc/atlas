@@ -10,9 +10,9 @@ import (
 	"sort"
 	"testing"
 
-	"ariga.io/atlas/cmd/atlas/internal/cmdext"
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/cmd/atlas/internal/cmdext"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/schema"
 
 	"github.com/stretchr/testify/require"
 	"github.com/zclconf/go-cty/cty"

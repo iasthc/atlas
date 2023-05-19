@@ -12,7 +12,7 @@ are notoriously hard to manage and recover from, often taking long hours of care
 engineers.
 
 As most outages happen directly as a result of a change to a system, Atlas provides users with means to verify the
-safety of planned changes before they happen. The [`sqlcheck`](https://pkg.go.dev/ariga.io/atlas@master/sql/sqlcheck)
+safety of planned changes before they happen. The [`sqlcheck`](https://pkg.go.dev/github.com/iasthc/atlas@master/sql/sqlcheck)
 package provides interfaces for analyzing the contents of SQL files to generate insights on the safety of many kinds of
 changes to database schemas. With this package developers may define an `Analyzer` that can be used to diagnose the impact
 of SQL statements on the target database.
@@ -33,7 +33,7 @@ ALTER TABLE `users` DROP COLUMN `email_address`;
 ```
 This statement is considered destructive because whatever data is stored in the `email_address` column
 will be deleted from disk, with no way to recover it. There are definitely situations where this type
-of change is desired, but they are relatively rare. Using the `destructive` ([GoDoc](https://pkg.go.dev/ariga.io/atlas@master/sql/sqlcheck/destructive))
+of change is desired, but they are relatively rare. Using the `destructive` ([GoDoc](https://pkg.go.dev/github.com/iasthc/atlas@master/sql/sqlcheck/destructive))
 Analyzer, teams can detect this type of change and design workflows that prevent it from happening accidentally.
 
 Running migration linting locally on in CI fails with exit code 1 in case destructive changes are detected. However,
@@ -78,7 +78,7 @@ ERROR 1062 (23000): Duplicate entry 'atlas' for key 'orders.idx_name'
 This type of change is tricky because a developer trying to simulate it locally
 might succeed in performing it only to be surprised that their migration script
 fails in production, breaking a deployment sequence or causing other unexpected
-behavior. Using the `data_depend` ([GoDoc](https://pkg.go.dev/ariga.io/atlas@master/sql/sqlcheck/datadepend))
+behavior. Using the `data_depend` ([GoDoc](https://pkg.go.dev/github.com/iasthc/atlas@master/sql/sqlcheck/datadepend))
 Analyzer, teams can detect this risk early and account for it in pre-deployment checks to a database.
 
 By default, data-dependent changes are reported but not cause migration linting to fail. Users can change this by

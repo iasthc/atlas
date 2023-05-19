@@ -7,9 +7,9 @@ package specutil
 import (
 	"testing"
 
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlspec"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlspec"
 
 	"github.com/stretchr/testify/require"
 )

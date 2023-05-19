@@ -12,10 +12,10 @@ import (
 	"context"
 	"errors"
 
-	"ariga.io/atlas/cmd/atlas/internal/lint"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/sqlcheck"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/cmd/atlas/internal/lint"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/sqlcheck"
+	"github.com/iasthc/atlas/sql/sqlclient"
 )
 
 // Exposes the lint reporting types.

@@ -21,12 +21,12 @@ import (
 	"text/template"
 	"time"
 
-	"ariga.io/atlas/cmd/atlas/internal/cloudapi"
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlclient"
-	"ariga.io/atlas/sql/sqltool"
+	"github.com/iasthc/atlas/cmd/atlas/internal/cloudapi"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/sql/sqltool"
 
 	"entgo.io/ent/dialect/sql"
 	entschema "entgo.io/ent/dialect/sql/schema"

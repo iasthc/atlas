@@ -4,4 +4,4 @@ use (
 	./
 )
 
-replace ariga.io/atlas => ../../
+replace github.com/iasthc/atlas => ../../

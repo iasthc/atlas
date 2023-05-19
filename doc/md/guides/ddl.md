@@ -129,7 +129,7 @@ playlist "comedy" {
 
 ### Reading with Go
 
-To read an Atlas HCL document with Go use the `EvalBytes` ([doc](https://pkg.go.dev/ariga.io/atlas/schemahcl#EvalBytes)) function
+To read an Atlas HCL document with Go use the `EvalBytes` ([doc](https://pkg.go.dev/github.com/iasthc/atlas/schemahcl#EvalBytes)) function
 from the `schemahcl` package:
 
 ```go
@@ -176,7 +176,7 @@ This mapping is discussed in the section about [Extensions](#extensions). The fi
 ### Writing with Go
 
 To encode a Go struct back into HCL, use the `schemahcl.Marshal`
-([doc](https://pkg.go.dev/ariga.io/atlas/schemahcl#Marshal)) function:
+([doc](https://pkg.go.dev/github.com/iasthc/atlas/schemahcl#Marshal)) function:
 
 ```go
 func ExampleMarshal() {
@@ -244,7 +244,7 @@ function:
 schemahcl.Register("point", &Point{})
 ```
 
-Extension structs may implement the [Remainer](https://pkg.go.dev/ariga.io/atlas/schemahcl#Remainer)
+Extension structs may implement the [Remainer](https://pkg.go.dev/github.com/iasthc/atlas/schemahcl#Remainer)
 interface if they wish to store any attributes and children that are not matched by their
 tagged fields. As a convenience the `schemahcl` package exports a `DefaultExtension` type that
 can be embedded to support this behavior.

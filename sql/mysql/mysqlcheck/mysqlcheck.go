@@ -10,16 +10,16 @@ import (
 	"strconv"
 	"strings"
 
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/mysql"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlcheck"
-	"ariga.io/atlas/sql/sqlcheck/condrop"
-	"ariga.io/atlas/sql/sqlcheck/datadepend"
-	"ariga.io/atlas/sql/sqlcheck/destructive"
-	"ariga.io/atlas/sql/sqlcheck/incompatible"
-	"ariga.io/atlas/sql/sqlcheck/naming"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/mysql"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlcheck"
+	"github.com/iasthc/atlas/sql/sqlcheck/condrop"
+	"github.com/iasthc/atlas/sql/sqlcheck/datadepend"
+	"github.com/iasthc/atlas/sql/sqlcheck/destructive"
+	"github.com/iasthc/atlas/sql/sqlcheck/incompatible"
+	"github.com/iasthc/atlas/sql/sqlcheck/naming"
 )
 
 var (

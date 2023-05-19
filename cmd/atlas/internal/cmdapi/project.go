@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"reflect"
 
-	"ariga.io/atlas/cmd/atlas/internal/cmdext"
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/cmd/atlas/internal/cmdext"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/schema"
 
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclparse"

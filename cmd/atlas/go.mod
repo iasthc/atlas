@@ -1,9 +1,9 @@
-module ariga.io/atlas/cmd/atlas
+module github.com/iasthc/atlas/cmd/atlas
 
 go 1.20
 
 require (
-	ariga.io/atlas v0.10.2-0.20230508104407-ca9e095759fb
+	github.com/iasthc/atlas v0.10.2-0.20230508104407-ca9e095759fb
 	entgo.io/ent v0.12.4-0.20230503082810-f251400818ea
 	github.com/antlr/antlr4/runtime/Go/antlr v0.0.0-20220816024939-bc8df83d7b9d
 	github.com/auxten/postgresql-parser v1.0.1

@@ -15,7 +15,7 @@ import (
 	"net/url"
 	"time"
 
-	"ariga.io/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/migrate"
 
 	"github.com/vektah/gqlparser/v2/gqlerror"
 )

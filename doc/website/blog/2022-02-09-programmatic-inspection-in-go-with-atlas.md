@@ -228,13 +228,13 @@ schema topology. Notice the many cyclic references that make it hard to print (b
 #### Inspecting databases in Go using Atlas
 
 While Atlas is commonly used as a [CLI tool](https://atlasgo.io/cli/getting-started/setting-up), all of Atlas's
-core-engine capabilities are available as a [Go module](https://pkg.go.dev/ariga.io/atlas) that you can use
+core-engine capabilities are available as a [Go module](https://pkg.go.dev/github.com/iasthc/atlas) that you can use
 programmatically. Let's get started with database inspection in Go:
 
 To install Atlas, use:
 
 ```shell
-go get ariga.io/atlas@master
+go get github.com/iasthc/atlas@master
 ```
 
 #### Drivers
@@ -266,8 +266,8 @@ import (
 	"log"
 	"testing"
 	_ "github.com/mattn/go-sqlite3"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlite"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlite"
 )
 
 func Test(t *testing.T) {
@@ -288,7 +288,7 @@ func Test(t *testing.T) {
 #### Inspection
 
 As we mentioned above, inspection is one of Atlas's core capabilities. Consider the `Inspector`
-interface in the [sql/schema](https://pkg.go.dev/ariga.io/atlas@master/sql/schema#Inspector)
+interface in the [sql/schema](https://pkg.go.dev/github.com/iasthc/atlas@master/sql/schema#Inspector)
 package:
 
 ```go
@@ -312,9 +312,9 @@ As you can see, the `Inspector` interface provides methods for inspecting on dif
 * `InspectSchema` - provides inspection capabilities for a single schema within a database server.
 * `InspectRealm` - inspects the entire connected database server.
 
-Each database driver (for example [MySQL](https://pkg.go.dev/ariga.io/atlas@master/sql/mysql#Driver),
-[Postgres](https://pkg.go.dev/ariga.io/atlas@master/sql/postgres#Driver) or
-[SQLite](https://pkg.go.dev/ariga.io/atlas@master/sql/sqlite#Driver)) implements this interface. Let's see how we can
+Each database driver (for example [MySQL](https://pkg.go.dev/github.com/iasthc/atlas@master/sql/mysql#Driver),
+[Postgres](https://pkg.go.dev/github.com/iasthc/atlas@master/sql/postgres#Driver) or
+[SQLite](https://pkg.go.dev/github.com/iasthc/atlas@master/sql/sqlite#Driver)) implements this interface. Let's see how we can
 use this interface by inspecting a "dummy" SQLite database. Continuing on the example from above:
 
 ```go

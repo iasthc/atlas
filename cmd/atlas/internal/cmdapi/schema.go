@@ -15,10 +15,10 @@ import (
 	"strings"
 	"text/template"
 
-	"ariga.io/atlas/cmd/atlas/internal/cmdlog"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/cmd/atlas/internal/cmdlog"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlclient"
 
 	"github.com/hashicorp/hcl/v2/hclwrite"
 	"github.com/manifoldco/promptui"

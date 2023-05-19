@@ -10,8 +10,8 @@ import (
 	"hash/fnv"
 	"time"
 
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
 )
 
 // DevDriver is a driver that provides additional functionality

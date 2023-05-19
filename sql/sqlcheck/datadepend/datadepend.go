@@ -9,11 +9,11 @@ import (
 	"errors"
 	"fmt"
 
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/internal/sqlx"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlcheck"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/internal/sqlx"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlcheck"
 )
 
 type (

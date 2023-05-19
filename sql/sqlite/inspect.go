@@ -13,8 +13,8 @@ import (
 	"strings"
 	"unicode"
 
-	"ariga.io/atlas/sql/internal/sqlx"
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/internal/sqlx"
+	"github.com/iasthc/atlas/sql/schema"
 )
 
 // A diff provides an SQLite implementation for schema.Inspector.

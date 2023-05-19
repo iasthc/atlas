@@ -10,11 +10,11 @@ import (
 	"fmt"
 	"strings"
 
-	"ariga.io/atlas/cmd/atlas/internal/cmdlog"
-	"ariga.io/atlas/cmd/atlas/internal/migrate/ent/revision"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/cmd/atlas/internal/cmdlog"
+	"github.com/iasthc/atlas/cmd/atlas/internal/migrate/ent/revision"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlclient"
 )
 
 // StatusReporter is used to gather information about migration status.

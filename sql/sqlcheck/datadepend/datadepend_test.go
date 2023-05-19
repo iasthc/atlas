@@ -8,13 +8,13 @@ import (
 	"context"
 	"testing"
 
-	"ariga.io/atlas/schemahcl"
+	"github.com/iasthc/atlas/schemahcl"
 
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlcheck"
-	"ariga.io/atlas/sql/sqlcheck/datadepend"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlcheck"
+	"github.com/iasthc/atlas/sql/sqlcheck/datadepend"
+	"github.com/iasthc/atlas/sql/sqlclient"
 
 	"github.com/stretchr/testify/require"
 )

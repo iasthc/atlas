@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"ariga.io/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/schema"
 )
 
 type (

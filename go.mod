@@ -1,4 +1,4 @@
-module ariga.io/atlas
+module github.com/iasthc/atlas
 
 go 1.19
 

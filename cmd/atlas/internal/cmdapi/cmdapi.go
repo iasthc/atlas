@@ -17,10 +17,10 @@ import (
 	"strings"
 	"time"
 
-	"ariga.io/atlas/cmd/atlas/internal/cmdext"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/cmd/atlas/internal/cmdext"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
+	"github.com/iasthc/atlas/sql/sqlclient"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
@@ -47,7 +47,7 @@ var (
 	}
 
 	// version holds Atlas version. When built with cloud packages should be set by build flag
-	// "-X 'ariga.io/atlas/cmd/atlas/internal/cmdapi.version=${version}'"
+	// "-X 'github.com/iasthc/atlas/cmd/atlas/internal/cmdapi.version=${version}'"
 	version string
 
 	// schemaCmd represents the subcommand 'atlas version'.
@@ -61,7 +61,7 @@ var (
 	}
 
 	// license holds Atlas license. When built with cloud packages should be set by build flag
-	// "-X 'ariga.io/atlas/cmd/atlas/internal/cmdapi.license=${license}'"
+	// "-X 'github.com/iasthc/atlas/cmd/atlas/internal/cmdapi.license=${license}'"
 	license = `LICENSE
 Atlas is licensed under Apache 2.0 as found in https://github.com/ariga/atlas/blob/master/LICENSE.`
 	licenseCmd = &cobra.Command{

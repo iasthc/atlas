@@ -93,7 +93,7 @@ module.exports = {
             {"label": "Blog", "to": "blog"},
             {"label": "Guides", "to": "guides"},
             {"label": "About", "to": "about"},
-            {"label": "GoDoc", "to": "https://pkg.go.dev/ariga.io/atlas"},
+            {"label": "GoDoc", "to": "https://pkg.go.dev/github.com/iasthc/atlas"},
           ]
         },
         {

@@ -15,10 +15,10 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/mysql"
-	"ariga.io/atlas/sql/schema"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/mysql"
+	"github.com/iasthc/atlas/sql/schema"
 	"github.com/stretchr/testify/require"
 )
 
@@ -595,7 +595,7 @@ func TestMySQL_CLI_MigrateApplyLock(t *testing.T) {
 			go func(i int) {
 				defer wg.Done()
 				out, err := exec.Command(
-					"go", "run", "ariga.io/atlas/cmd/atlas",
+					"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 					"migrate", "apply",
 					"--dir", "file://testdata/migrations/mysqlock",
 					"--url", t.url("mysqlock"),

@@ -13,7 +13,7 @@ import (
 	"os/exec"
 	"testing"
 
-	"ariga.io/atlas/sql/sqlite"
+	"github.com/iasthc/atlas/sql/sqlite"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/require"
 )
@@ -27,7 +27,7 @@ func TestCLI_Version(t *testing.T) {
 	}{
 		{
 			name: "dev mode",
-			cmd: exec.Command("go", "run", "ariga.io/atlas/cmd/atlas",
+			cmd: exec.Command("go", "run", "github.com/iasthc/atlas/cmd/atlas",
 				"version",
 			),
 			expected: "atlas version - development\nhttps://github.com/ariga/atlas/releases/latest\n",
@@ -36,8 +36,8 @@ func TestCLI_Version(t *testing.T) {
 			name: "release",
 			cmd: exec.Command("go", "run",
 				"-ldflags",
-				"-X ariga.io/atlas/cmd/atlas/internal/cmdapi.version=v1.2.3",
-				"ariga.io/atlas/cmd/atlas",
+				"-X github.com/iasthc/atlas/cmd/atlas/internal/cmdapi.version=v1.2.3",
+				"github.com/iasthc/atlas/cmd/atlas",
 				"version",
 			),
 			expected: "atlas version v1.2.3\nhttps://github.com/ariga/atlas/releases/tag/v1.2.3\n",
@@ -46,8 +46,8 @@ func TestCLI_Version(t *testing.T) {
 			name: "canary",
 			cmd: exec.Command("go", "run",
 				"-ldflags",
-				"-X ariga.io/atlas/cmd/atlas/internal/cmdapi.version=v0.3.0-6539f2704b5d-canary",
-				"ariga.io/atlas/cmd/atlas",
+				"-X github.com/iasthc/atlas/cmd/atlas/internal/cmdapi.version=v0.3.0-6539f2704b5d-canary",
+				"github.com/iasthc/atlas/cmd/atlas",
 				"version",
 			),
 			expected: "atlas version v0.3.0-6539f2704b5d-canary\nhttps://github.com/ariga/atlas/releases/latest\n",

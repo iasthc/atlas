@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
-	"ariga.io/atlas/cmd/atlas/internal/cmdlog"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/sqlclient"
+	"github.com/iasthc/atlas/cmd/atlas/internal/cmdlog"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/sqlclient"
 
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/stretchr/testify/require"

@@ -12,7 +12,7 @@ of incremental improvements and bugfixes, there is one feature that we're partic
 excited about and want to share with you in this post.
 
 As most outages happen directly as a result of a change to a system, Atlas provides users with the means to verify the
-safety of planned changes before they happen. The [`sqlcheck`](https://pkg.go.dev/ariga.io/atlas@master/sql/sqlcheck)
+safety of planned changes before they happen. The [`sqlcheck`](https://pkg.go.dev/github.com/iasthc/atlas@master/sql/sqlcheck)
 package provides interfaces for analyzing the contents of SQL files to generate insights on the safety of many kinds of
 changes to database schemas. With this package, developers may define an `Analyzer` that can be used to diagnose the impact
 of SQL statements on the target database.

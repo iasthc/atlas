@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"ariga.io/atlas/cmd/atlas/internal/migrate/ent/predicate"
-	"ariga.io/atlas/cmd/atlas/internal/migrate/ent/revision"
-	"ariga.io/atlas/sql/migrate"
+	"github.com/iasthc/atlas/cmd/atlas/internal/migrate/ent/predicate"
+	"github.com/iasthc/atlas/cmd/atlas/internal/migrate/ent/revision"
+	"github.com/iasthc/atlas/sql/migrate"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 )

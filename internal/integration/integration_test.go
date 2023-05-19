@@ -19,10 +19,10 @@ import (
 	"testing"
 	"text/template"
 
-	"ariga.io/atlas/schemahcl"
-	"ariga.io/atlas/sql/migrate"
-	"ariga.io/atlas/sql/schema"
 	"github.com/hashicorp/hcl/v2/hclparse"
+	"github.com/iasthc/atlas/schemahcl"
+	"github.com/iasthc/atlas/sql/migrate"
+	"github.com/iasthc/atlas/sql/schema"
 	"github.com/stretchr/testify/require"
 )
 
@@ -149,7 +149,7 @@ func testCLIMigrateApplyBC(t T, dialect string) {
 
 	// Connection to schema with flag will respect flag (also mimics "old" behavior).
 	out, err := exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"migrate", "apply",
 		"--allow-dirty", // since database does contain more than one schema
 		"--dir", "file://testdata/migrations/"+dialect,
@@ -164,7 +164,7 @@ func testCLIMigrateApplyBC(t T, dialect string) {
 
 	// Connection to realm will see the existing schema and will not attempt to migrate.
 	out, err = exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"migrate", "apply",
 		"--dir", "file://testdata/migrations/"+dialect,
 		"--url", t.url(""),
@@ -174,7 +174,7 @@ func testCLIMigrateApplyBC(t T, dialect string) {
 
 	// Connection to schema without flag will error.
 	out, err = exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"migrate", "apply",
 		"--dir", "file://testdata/migrations/"+dialect,
 		"--url", t.url("bc_test"),
@@ -184,7 +184,7 @@ func testCLIMigrateApplyBC(t T, dialect string) {
 
 	// Providing the flag and we are good.
 	out, err = exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"migrate", "apply",
 		"--dir", "file://testdata/migrations/"+dialect,
 		"--url", t.url("bc_test"),
@@ -199,7 +199,7 @@ func testCLIMigrateApplyBC(t T, dialect string) {
 		&schema.AddSchema{S: schema.New("bc_test")},
 	)
 	out, err = exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"migrate", "apply",
 		"--dir", "file://testdata/migrations/"+dialect,
 		"--url", t.url("bc_test"),
@@ -210,7 +210,7 @@ func testCLIMigrateApplyBC(t T, dialect string) {
 
 	// Consecutive attempts do not need the flag anymore.
 	out, err = exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"migrate", "apply",
 		"--dir", "file://testdata/migrations/"+dialect,
 		"--url", t.url("bc_test"),
@@ -226,7 +226,7 @@ func testCLIMigrateApplyBC(t T, dialect string) {
 		&schema.AddSchema{S: schema.New("bc_test_2")},
 	)
 	out, err = exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"migrate", "apply",
 		"--allow-dirty", // since database does contain more than one schema
 		"--dir", "file://testdata/migrations/"+dialect,
@@ -249,7 +249,7 @@ func testCLISchemaInspect(t T, h string, url string, eval schemahcl.Evaluator, a
 	require.NoError(t, err)
 	t.applyHcl(h)
 	runArgs := []string{
-		"run", "ariga.io/atlas/cmd/atlas",
+		"run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema",
 		"inspect",
 		"-u",
@@ -276,7 +276,7 @@ func testCLISchemaInspectEnv(t T, h string, env string, eval schemahcl.Evaluator
 	err = evalBytes([]byte(h), &expected, eval)
 	require.NoError(t, err)
 	t.applyHcl(h)
-	cmd := exec.Command("go", "run", "ariga.io/atlas/cmd/atlas",
+	cmd := exec.Command("go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema",
 		"inspect",
 		"--env",
@@ -299,7 +299,7 @@ var initOnce sync.Once
 func initCLI() error {
 	var err error
 	initOnce.Do(func() {
-		err = exec.Command("go", "run", "-mod=mod", "ariga.io/atlas/cmd/atlas").Run()
+		err = exec.Command("go", "run", "-mod=mod", "github.com/iasthc/atlas/cmd/atlas").Run()
 	})
 	return err
 }
@@ -313,7 +313,7 @@ func testCLIMultiSchemaApply(t T, h string, url string, schemas []string, eval s
 	var expected schema.Realm
 	err = evalBytes([]byte(h), &expected, eval)
 	require.NoError(t, err)
-	cmd := exec.Command("go", "run", "ariga.io/atlas/cmd/atlas",
+	cmd := exec.Command("go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema",
 		"apply",
 		"-f",
@@ -341,7 +341,7 @@ func testCLIMultiSchemaInspect(t T, h string, url string, schemas []string, eval
 	err = evalBytes([]byte(h), &expected, eval)
 	require.NoError(t, err)
 	t.applyRealmHcl(h)
-	cmd := exec.Command("go", "run", "ariga.io/atlas/cmd/atlas",
+	cmd := exec.Command("go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema",
 		"inspect",
 		"-u",
@@ -368,7 +368,7 @@ func testCLISchemaApply(t T, h string, url string, args ...string) {
 	err = os.WriteFile(f, []byte(h), 0644)
 	require.NoError(t, err)
 	runArgs := []string{
-		"run", "ariga.io/atlas/cmd/atlas",
+		"run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema",
 		"apply",
 		"-u",
@@ -402,7 +402,7 @@ func testCLISchemaApplyDry(t T, h string, url string) {
 	f := filepath.Join(t.TempDir(), "schema.hcl")
 	err = os.WriteFile(f, []byte(h), 0644)
 	require.NoError(t, err)
-	cmd := exec.Command("go", "run", "ariga.io/atlas/cmd/atlas",
+	cmd := exec.Command("go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema",
 		"apply",
 		"-u",
@@ -436,7 +436,7 @@ func testCLISchemaApplyAutoApprove(t T, h string, url string, args ...string) {
 	err = os.WriteFile(f, []byte(h), 0644)
 	require.NoError(t, err)
 	runArgs := []string{
-		"run", "ariga.io/atlas/cmd/atlas",
+		"run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema",
 		"apply",
 		"-u",
@@ -498,14 +498,14 @@ func testCLISchemaApplyFromMigrationDir(t T) {
 
 	require.NoError(t, initCLI())
 	require.NoError(t, exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"migrate", "hash",
 		"--dir", "file://"+p,
 	).Run())
 
 	// All versions - must contain all migration files.
 	out, err := exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema", "apply",
 		"-u", t.url(dbname),
 		"--to", "file://"+p,
@@ -518,7 +518,7 @@ func testCLISchemaApplyFromMigrationDir(t T) {
 
 	// One version - must contain only file one.
 	out, err = exec.Command(
-		"go", "run", "ariga.io/atlas/cmd/atlas",
+		"go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema", "apply",
 		"-u", t.url(dbname),
 		"--to", "file://"+p+"?version=1",
@@ -535,7 +535,7 @@ func testCLISchemaDiff(t T, url string) {
 
 	require.NoError(t, err)
 	t.dropTables("users")
-	cmd := exec.Command("go", "run", "ariga.io/atlas/cmd/atlas",
+	cmd := exec.Command("go", "run", "github.com/iasthc/atlas/cmd/atlas",
 		"schema",
 		"diff",
 		"--from",
@@ -691,7 +691,7 @@ var _ migrate.RevisionReadWriter = (*rrw)(nil)
 
 func buildCmd(t *testing.T) (string, error) {
 	td := t.TempDir()
-	if b, err := exec.Command("go", "build", "-o", td, "ariga.io/atlas/cmd/atlas").CombinedOutput(); err != nil {
+	if b, err := exec.Command("go", "build", "-o", td, "github.com/iasthc/atlas/cmd/atlas").CombinedOutput(); err != nil {
 		return "", fmt.Errorf("%w: %s", err, b)
 	}
 	return filepath.Join(td, "atlas"), nil
