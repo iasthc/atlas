@@ -173,11 +173,12 @@ func (i *inspect) columns(ctx context.Context, s *schema.Schema) error {
 // addColumn scans the current row and adds a new column from it to the table.
 func (i *inspect) addColumn(s *schema.Schema, rows *sql.Rows) (err error) {
 	var (
+		attnum                                                                                                                              sql.NullInt16
 		typid, typelem, maxlen, precision, timeprecision, scale, seqstart, seqinc, seqlast                                                  sql.NullInt64
 		table, name, typ, fmtype, nullable, defaults, identity, genidentity, genexpr, charset, collate, comment, typtype, elemtyp, interval sql.NullString
 	)
 	if err = rows.Scan(
-		&table, &name, &typ, &fmtype, &nullable, &defaults, &maxlen, &precision, &timeprecision, &scale, &interval, &charset,
+		&attnum, &table, &name, &typ, &fmtype, &nullable, &defaults, &maxlen, &precision, &timeprecision, &scale, &interval, &charset,
 		&collate, &identity, &seqstart, &seqinc, &seqlast, &genidentity, &genexpr, &comment, &typtype, &typelem, &elemtyp, &typid,
 	); err != nil {
 		return err
@@ -187,7 +188,8 @@ func (i *inspect) addColumn(s *schema.Schema, rows *sql.Rows) (err error) {
 		return fmt.Errorf("table %q was not found in schema", table.String)
 	}
 	c := &schema.Column{
-		Name: name.String,
+		Name:   name.String,
+		Number: attnum.Int16,
 		Type: &schema.ColumnType{
 			Raw:  typ.String,
 			Null: nullable.String == "YES",
@@ -1123,6 +1125,7 @@ ORDER BY
 	// Query to list table columns.
 	columnsQuery = `
 SELECT
+	a.attnum,
 	t1.table_name,
 	t1.column_name,
 	t1.data_type,

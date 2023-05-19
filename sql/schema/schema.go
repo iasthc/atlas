@@ -38,6 +38,7 @@ type (
 		Default Expr
 		Attrs   []Attr
 		Indexes []*Index
+		Number  int16
 		// Foreign keys that this column is
 		// part of their child columns.
 		ForeignKeys []*ForeignKey
