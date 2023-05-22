@@ -39,6 +39,7 @@ type (
 		Attrs   []Attr
 		Indexes []*Index
 		Number  int16
+		OID     int64
 		// Foreign keys that this column is
 		// part of their child columns.
 		ForeignKeys []*ForeignKey

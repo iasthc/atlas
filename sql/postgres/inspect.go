@@ -194,6 +194,7 @@ func (i *inspect) addColumn(s *schema.Schema, rows *sql.Rows) (err error) {
 			Raw:  typ.String,
 			Null: nullable.String == "YES",
 		},
+		OID: typid.Int64,
 	}
 	c.Type.Type, err = columnType(&columnDesc{
 		typ:           typ.String,
