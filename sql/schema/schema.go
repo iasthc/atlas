@@ -33,13 +33,13 @@ type (
 
 	// A Column represents a column definition.
 	Column struct {
-		Name    string
-		Type    *ColumnType
-		Default Expr
-		Attrs   []Attr
-		Indexes []*Index
-		Number  int16
-		OID     int64
+		Name     string
+		Type     *ColumnType
+		Default  Expr
+		Attrs    []Attr
+		Indexes  []*Index
+		Number   int16
+		TableOID int64
 		// Foreign keys that this column is
 		// part of their child columns.
 		ForeignKeys []*ForeignKey
